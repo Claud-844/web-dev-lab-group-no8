@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<h1>Contact Page</h1>
+<body>
+    <form>
+        <table></table>
+            <tr>
+                <td><label for="name">Full Name:</label></td>
+                <td><input type="text" required id="name" name="name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" required id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" required id="password" name="password"></td>
+            </tr>
+        </table>
+    <br
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <label for="courses">Courses:</label>
+            <input type="checkbox" id="HTML" name="courses" value="html">
+            <label for="HTML">HTML</label>
+            <input type="checkbox" id="CSS" name="courses" value="css">
+            <label for="CSS">CSS</label>
+            <input type="checkbox" id="JavaScript" name="courses" value="javascript">
+            <label for="JavaScript">JavaScript</label>
+        </select><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<a href="index.html">Back to Home</a>
+</html>
