@@ -1,0 +1,11 @@
+#section1 p2 {
+    background-color: burlywood;
+    font-size: 1em;
+    font-family: sans-serif;
+    
+}
+
+.image :hover{
+    width: 200px;
+    height: 200px;
+}
