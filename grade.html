@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student grade calculator</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            width: 350px;
+            background-color: white;
+            padding: 25px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color: #333;
+        }
+
+        input{
+            width: 90%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #999;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover{
+            background-color: #0056b3;
+        }
+
+        #results{
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>student grade calculator</h1>
+        <input type="number" id="scoreInput" placeholder="enter student score">
+        <button id="calcBtn">calculate grade</button>
+        <div id="results"></div>
+    </div>
+    <script>
+        const scoreInput = document.getElementById("scoreInput");
+        const calcBtn = document.getElementById("calcBtn");
+        const results = document.getElementById("results");
+        calcBtn.addEventListener("click",function(){
+            let score = Number(scoreInput.value);
+            if (score < 0 || score>100 ||isNaN(score)){
+                results.innerHTML = "<p style = 'color: red'> please enter a valid score between 0 and 100</p>";
+                return score;
+            }
+            let grade;
+            if(score>= 80){
+                grade="A";
+            }
+            else if(score>=70){
+                grade = "B";
+            }
+            else if(score >=60){
+                grade = "C";
+            }
+            else if(score>=50){
+                grade = "D";
+            }
+            else{
+                grade = "F";
+            }
+            results.innerHTML = `
+                     <h3>Results</h3>
+                     <p><strong>Score:</strong> ${score}</p>
+                      <p><strong>Grade:</strong> ${grade}</p>`;
+        }
+       
+            
+        )
+        
+    </script>
+</body>
+</html>
